@@ -15,7 +15,19 @@ require_once("config.php");
 // var_dump($search) ;
 
 //Carrega um usuário usando o login e a senha
+// $usuario = new Usuario();
+// $usuario->login("joão", "987654");
+// echo $usuario;
+
+//Criando um novo usuario
+// $aluno = new Usuario("Ana", "ana123");
+// $aluno->insert();
+// echo $aluno;
+
+//
 $usuario = new Usuario();
-$usuario->login("joão", "987654");
+$usuario->loadById(8);
+$usuario->update("professor", "prof123");
+
 echo $usuario;
  ?>
